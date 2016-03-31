@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.test.scroll.MainActivity">
+
+    <Button
+        android:id="@+id/btn_instantscroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="瞬间移动"
+        android:onClick="instantScroll"/>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_instantscroll"
+        android:text="TextView"
+        android:layout_marginLeft="100px"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="#33ff0000"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv"
+        android:text="Button"
+        android:layout_marginLeft="100px"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:background="#3300ff00"/>
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn2"
+        android:paddingLeft="20dp"
+        android:paddingRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:background="@mipmap/ic_launcher"/>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/tv"
+        android:layout_marginLeft="20dp"
+        android:layout_alignTop="@id/tv"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="#330000ff">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_marginLeft="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="#33ff0000"/>
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:background="#3300ff00"/>
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/ll"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#000000"/>
+
+    <Button
+        android:id="@+id/btn_smoothScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="50dp"
+        android:text="平滑移动"
+        android:onClick="smoothScroll"/>
+
+    <com.test.scroll.widget.SmoothScrollCircle
+        android:id="@+id/ssCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_smoothScroll"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"
+        android:background="#3300ff00"/>
+
+    <com.test.scroll.widget.SmoothScrollButton
+        android:id="@+id/ssButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ssCircle"
+        android:text="smoothScrollButton"
+        android:layout_alignLeft="@id/ssCircle"
+        android:padding="10dp"
+        android:background="#330000ff"/>
+
+    <com.test.scroll.widget.SmoothScrollTextView
+        android:id="@+id/ssTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ssButton"
+        android:text="smoothScrollTv"
+        android:layout_alignLeft="@id/ssButton"
+        android:padding="10dp"
+        android:background="#33ff0000"/>
+
+</RelativeLayout>

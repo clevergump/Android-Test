@@ -1,3 +1,12 @@
+/Android-Test.iml
+/.gradle
+/.idea
+/build
+/ScrollTest/build
+/ScrollTest/app.iml
+/AndroidTest.iml
+/local.properties
+/ScrollTest.iml
 # Built application files
 *.apk
 *.ap_
@@ -30,3 +39,6 @@ proguard/
 
 # Android Studio captures folder
 captures/
+/*.iml
+/ScrollTest/*.iml
+/ScrollTest/*.iml
